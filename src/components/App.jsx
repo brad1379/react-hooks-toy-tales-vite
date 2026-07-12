@@ -8,6 +8,7 @@ function App() {
   const [showForm, setShowForm] = useState(false);
   const [toys, setToys] = useState([]);
 
+  // fetches the data from the server
   useEffect(() => {
     fetch("http://localhost:3001/toys")
     .then(response => {
@@ -18,6 +19,7 @@ function App() {
     .catch(error => console.log(error.message))
   })
 
+  // Toggles form to add a toy when Add a Toy button is clicked
   function handleClick() {
     setShowForm((showForm) => !showForm);
   }
