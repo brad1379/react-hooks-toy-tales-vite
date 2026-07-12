@@ -4,7 +4,7 @@
       "id": "2",
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
+      "likes": 20
     },
     {
       "id": "3",
@@ -53,6 +53,12 @@
       "name": "Wolvering",
       "image": "https://www.pngitem.com/pimgs/m/604-6048578_wolverine-1-6th-scale-action-figure-wolverine-sixth.png",
       "likes": 2
+    },
+    {
+      "id": "5a3c",
+      "name": "adfadsfadsf",
+      "image": "",
+      "favorites": 0
     }
   ]
 }
