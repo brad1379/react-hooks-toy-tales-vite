@@ -6,6 +6,7 @@ function ToyForm() {
     image: ""
   })
 
+  // Adds toy
   function handleAddToy(event){
     setFormData(previousData => ({
       ...previousData, 
@@ -13,13 +14,17 @@ function ToyForm() {
     }))
   }
 
+  // Handles submit
   function handleSubmit(event){
     event.preventDefault();
 
+    // Create a new toy object
     const newToy = {
-      ...formData
+      ...formData, 
+      favorites: 0
     }
 
+    // Create a post request to add toys to the server
     fetch("http://localhost:3001/toys", {
       method: "POST", 
       headers: {"Content-Type": "application/json"},

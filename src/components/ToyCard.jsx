@@ -1,6 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 
 function ToyCard({ id, name, image, likes }) {
+
+  function handleLikes() {
+    const updatedLikes = likes + 1;
+
+    fetch(`http://localhost:3001/toys/${id}`, {
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({likes: updatedLikes})
+    })
+    .then(response => {
+      if (!response.ok) {throw new Error("failed to update likes")}
+      return response.json()
+    })
+    .catch(error => console.log(error))
+  }
+
   return (
     <div className="card" data-testid="toy-card">
       <h2>{name}</h2>
@@ -10,7 +26,7 @@ function ToyCard({ id, name, image, likes }) {
         className="toy-avatar"
       />
       <p>{likes} Likes </p>
-      <button className="like-btn">Like {"<3"}</button>
+      <button className="like-btn" onClick={handleLikes}>Like {"<3"}</button>
       <button className="del-btn">Donate to GoodWill</button>
     </div>
   );

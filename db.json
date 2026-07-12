@@ -46,12 +46,19 @@
       "id": "8",
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
-      "likes": -2
+      "likes": 11
     },
     {
       "id": "e45e",
       "name": "Spiderman",
-      "image": "https://www.pngitem.com/pimgs/m/14-140993_spiderman-png-transparent-png.png"
+      "image": "https://www.pngitem.com/pimgs/m/14-140993_spiderman-png-transparent-png.png",
+      "likes": 4
+    },
+    {
+      "id": "c82f",
+      "name": "Wolvering",
+      "image": "https://www.pngitem.com/pimgs/m/604-6048578_wolverine-1-6th-scale-action-figure-wolverine-sixth.png",
+      "likes": 2
     }
   ]
 }
