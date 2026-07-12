@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-function ToyCard({ id, name, image, likes, donateToy }) {
-
+function ToyCard({ id, name, image, likes, donateToy, handleToyLikes }) {
+  
   // handles likes with a patch request to server
   function handleLikes() {
     const updatedLikes = likes + 1;
@@ -15,6 +15,7 @@ function ToyCard({ id, name, image, likes, donateToy }) {
       if (!response.ok) {throw new Error("failed to update likes")}
       return response.json()
     })
+    .then(updatedToy => handleToyLikes(updatedToy))
     .catch(error => console.log(error))
   }
 

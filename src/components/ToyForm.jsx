@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function ToyForm() {
+function ToyForm({addToy}) {
   const [formData, setFormData] = useState({
     name: "",
     image: ""
@@ -34,7 +34,7 @@ function ToyForm() {
       if(!response.ok) {throw new Error("failed to add toy")}
       return response.json()
     })
-    .then(data => console.log(data))
+    .then(data => addToy(data))
     .catch(error => console.log(error.message))
   }
 
